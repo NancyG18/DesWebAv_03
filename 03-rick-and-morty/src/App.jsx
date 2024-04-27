@@ -1,14 +1,23 @@
 import { useState, useEffect } from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Inicio from './components/Inicio'
+import Personaje from './components/Personaje'
 import Imagenes from './components/Imagenes'
 import './App.css'
 
+
 function App () {
-  const [image, setImagenes] = useState([])
-  const GET = import.meta.env.GET
+  return (
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Inicio></Inicio>}></Route>
+          <Route path='/personaje/:id' element={<Personaje></Personaje>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
 
-  useEffect(() => {
-
-  }, [])
 
   return (
     <>
