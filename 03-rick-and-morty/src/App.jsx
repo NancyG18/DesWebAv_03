@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+
 function App () {
   const [characters, setCharacters] = useState([])
 
@@ -21,6 +22,7 @@ function App () {
   }, [])
 
   return (
+    
     <div className='w-11/12 m-auto'>
       <h1 className='py-6 text-center text-3xl'>RICK AND MORTY</h1>
       <div className='grid grid-cols-4 gap-4'>
@@ -31,11 +33,12 @@ function App () {
             <p>{character.species}</p>
             <p>{character.status}</p>
             <p>{character.gender}</p>
+            
     </div>
         ))}
         </div>
       </div>
-  ) 
+      )
 }
 
 export default App
